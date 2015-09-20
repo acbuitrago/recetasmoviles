@@ -9,16 +9,12 @@ namespace RecetasMoviles.Controllers
 {
     public class RecetasController : ApiController
     {
-        public string[] Get()
+        public int Get()
         {
             Random random = new Random();
-            int value = random.Next(0, 100);
+            int value = random.Next(100, 10000);
 
-            return new string[]
-                {
-                     "value",
-                     value.ToString()
-                };
+            return value;
         }
     }
 }
